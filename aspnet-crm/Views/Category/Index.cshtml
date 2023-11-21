@@ -1,0 +1,28 @@
+﻿@model List<aspnet_crm.Data.Models.Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 style="text-align:center">Category List</h2>
+<br />
+<table class="table table-bordered" style="position:relative; left: 50px;">
+    <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+        <th>Status</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach(var x in Model)
+    
+    {
+       <tr>
+           <td>@x.CategoryID</td>
+           <td>@x.CategoryName</td>
+           <td>@x.Status</td>
+            <td><a href="/Category/CategoryDelete/@x.CategoryID" class="btn btn-danger">Delete</a></td>
+           <td><a href="/Category/CategoryGet/@x.CategoryID" class="btn btn-success">Update</a></td>
+       </tr>
+    }
+</table>
+<a style="position:relative; left: 50px;" href="/Category/CategoryAdd" class="btn btn-primary">New Category</a>

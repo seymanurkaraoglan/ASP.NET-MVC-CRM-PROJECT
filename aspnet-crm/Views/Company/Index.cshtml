@@ -1,0 +1,40 @@
+﻿@using X.PagedList;
+@using X.PagedList.Mvc
+@using X.PagedList.Mvc.Core
+
+@model IPagedList<aspnet_crm.Data.Models.Company>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 style="text-align:center">Company List</h2>
+<br />
+<table class="table table-bordered" style="position:relative; left: 50px;">
+    <tr>
+        <th>ID</th>
+        <th>Company Name</th>
+        <th>Giro</th>
+        <th>Category Name</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Details</th>
+    </tr>
+    @foreach (var x in Model)
+
+    {
+        <tr>
+            <td>@x.CompanyID</td>
+            <td>@x.Name</td>
+            <td>@x.Giro</td>
+            <td>@x.Category.CategoryName</td>
+            <td><a href="/Company/DeleteCompany/@x.CompanyID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Company/CompanyGet/@x.CompanyID" class="btn btn-success">Update</a></td>
+            <td><a href="/Company/CompanyDetail/@x.CompanyID" class="btn btn-info">Details</a></td>
+        </tr>
+    }
+</table>
+<div class="page-link" style="position:relative; left: 50px;">
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+</div>
+
+<a style="position:relative; left: 50px;" href="/Company/AddCompany/" class="btn btn-primary">New Company</a>

@@ -1,0 +1,24 @@
+﻿@model aspnet_crm.Data.Models.Admin
+@{
+    ViewData["Title"] = "AdminGet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Update Admin</h2>
+<br />
+@using (Html.BeginForm("AdminUpdate", "Admin", FormMethod.Post))
+{
+    @Html.Label("Admin ID")
+    @Html.TextBoxFor(x => x.AdminID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Admin Username")
+    @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+    <br />
+    @Html.Label("Password")
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    <br />
+    @Html.Label("Admin Role")
+    @Html.TextBoxFor(x => x.AdminRole, new { @class = "form-control" })
+    
+    <br />
+    <button class="btn btn-primary">Save</button>
+}

@@ -1,0 +1,21 @@
+﻿@model aspnet_crm.Data.Models.Category
+@{
+    ViewData["Title"] = "CategoryAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Category Add Page</h2>
+<br />
+@using (Html.BeginForm("CategoryAdd", "Category", FormMethod.Post))
+
+{
+    @Html.LabelFor(x => x.CategoryName, new { style = "position:relative; left: 50px;" })
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control", style = "position:relative; left: 50px;" })
+    @Html.ValidationMessageFor(x => x.CategoryName, "", new { @style = "color:red" })
+    <br />
+    @Html.LabelFor(x => x.CategoryDescription, new { style = "position:relative; left: 50px;" })
+    @Html.TextBoxFor(x => x.CategoryDescription, new { @class = "form-control", style = "position:relative; left: 50px;"})
+    <br />
+    <button class="btn btn-info" style="position:relative; left: 50px;">Save</button>
+
+}

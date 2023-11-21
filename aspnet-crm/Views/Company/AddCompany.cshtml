@@ -1,0 +1,26 @@
+﻿@model aspnet_crm.Data.Models.Company
+@{
+    ViewData["Title"] = "AddCompany";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 style="text-align:center">Add Company</h2>
+<br />
+@using (Html.BeginForm("AddCompany", "Company", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Name, new { style = "position:relative; left: 50px;" })
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control", style = "position:relative; left: 50px;" })
+    <br />
+    @Html.LabelFor(x => x.Giro, new { style = "position:relative; left: 50px;" })
+    @Html.TextBoxFor(x => x.Giro, new { @class = "form-control", style = "position:relative; left: 50px;" })
+    <br />
+    @Html.LabelFor(x => x.ImageURL, new { style = "position:relative; left: 50px;" })
+    @Html.TextBoxFor(x => x.ImageURL, new { @class = "form-control", style = "position:relative; left: 50px;" })
+    <br />
+    @Html.LabelFor(x => x.Category, new { style = "position:relative; left: 50px;" })
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.v1, new { @class = "form-control", style = "position:relative; left: 50px;" })
+    <br />
+    @Html.LabelFor(x => x.Description, new { style = "position:relative; left: 50px;" })
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control", style = "position:relative; left: 50px;" })
+    <br />
+    <button class="btn btn-primary" style="position:relative; left: 50px;">Save</button>
+}

@@ -1,0 +1,33 @@
+﻿
+@model List<aspnet_crm.Data.Models.Admin>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Admin List</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>AdminID</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>AdminRole</th>
+        <th>Delete</th>
+        <th>Update</th>
+        
+    </tr>
+    @foreach (var x in Model)
+
+    {
+        <tr>
+            <td>@x.AdminID</td>
+            <td>@x.Username</td>
+            <td>@x.Password</td>
+            <td>@x.AdminRole</td>
+            <td><a href="/Admin/DeleteAdmin/@x.AdminID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Admin/AdminGet/@x.AdminID" class="btn btn-success">Update</a></td>
+            
+        </tr>
+    }
+</table>
+<a href="/Admin/AddAdmin/" class="btn btn-primary">New Admin</a>

@@ -1,0 +1,121 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM</title>
+    <link rel="shortcut icon" type="image/png" href="~/modernize-1.0.0/modernize-1.0.0/src/assets/images/logos/favicon.png" />
+    <link rel="stylesheet" href="~/modernize-1.0.0/modernize-1.0.0/src/assets/css/styles.min.css" />
+</head>
+
+<body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+         data-sidebar-position="fixed" data-header-position="fixed">
+        <!-- Sidebar Start -->
+        <aside class="left-sidebar" style="width: 250px;">
+            <!-- Sidebar scroll-->
+            <div>
+                <div class="brand-logo d-flex align-items-center justify-content-between">
+                    <a href="/Category/Index/" class="text-nowrap logo-img">
+                        @* <img src="~/modernize-1.0.0/modernize-1.0.0/src/assets/images/logos/dark-logo.svg" width="180" alt="" /> *@
+                        <h2>CRM</h2>
+                    </a>
+                    <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                        <i class="ti ti-x fs-8"></i>
+                    </div>
+                </div>
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/Category/Index/" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-article"></i>
+                                </span>
+                                <span class="hide-menu">Category</span>
+                            </a>
+                        </li>
+                       
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/Company/Index/" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-alert-circle"></i>
+                                </span>
+                                <span class="hide-menu">Company</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/Chart/Index/" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-cards"></i>
+                                </span>
+                                <span class="hide-menu">Google Pie Chart</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/Chart/Index2/" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-file-description"></i>
+                                </span>
+                                <span class="hide-menu">Google Column Chart</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/Chart/Index3/" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-typography"></i>
+                                </span>
+                                <span class="hide-menu">Google Dynamic Chart</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/Admin/Index/" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-typography"></i>
+                                </span>
+                                <span class="hide-menu">Admins</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/Chart/Statistics/" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-login"></i>
+                                </span>
+                                <span class="hide-menu">Statistics</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/Login/LogOut/" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-user-plus"></i>
+                                </span>
+                                <span class="hide-menu">LogOut</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+       
+    </div>
+    <script src="~/modernize-1.0.0/modernize-1.0.0/src/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="~/modernize-1.0.0/modernize-1.0.0/src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/modernize-1.0.0/modernize-1.0.0/src/assets/js/sidebarmenu.js"></script>
+    <script src="~/modernize-1.0.0/modernize-1.0.0/src/assets/js/app.min.js"></script>
+    <script src="~/modernize-1.0.0/modernize-1.0.0/src/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="~/modernize-1.0.0/modernize-1.0.0/src/assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="~/modernize-1.0.0/modernize-1.0.0/src/assets/js/dashboard.js"></script>
+    <div class="container">
+        @RenderBody()
+    </div>
+
+</body>
+
+</html>

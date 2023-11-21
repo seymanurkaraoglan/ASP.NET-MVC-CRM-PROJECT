@@ -1,0 +1,34 @@
+﻿@model aspnet_crm.Data.Models.Company
+@{
+    ViewData["Title"] = "CompanyDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 style="text-align:center">Company Detail</h2>
+<br />
+
+
+<table class="table table-bordered" style="text-align:center">
+    
+    @Html.Label("Company ID")
+    @Html.DisplayFor(x => x.CompanyID, new { @class = "form-control" })
+   <br />
+    @Html.Label("Company Name")
+    @Html.DisplayFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    @Html.Label("Description")
+    @Html.DisplayFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Giro")
+    @Html.DisplayFor(x => x.Giro, new { @class = "form-control" })
+    <br />
+    
+    @* <td>
+    @Html.Label("Image URL")
+    @Html.DisplayFor(x => x.ImageURL, new { @class = "form-control" })
+    </td> *@
+    
+    @Html.Label("Category ID")
+    @Html.DisplayFor(x => x.CategoryID, new { @class = "form-control" })
+   
+   </table> 
+   
